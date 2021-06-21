@@ -1,78 +1,44 @@
-import React from "react";
-import {NavLink}from "react-router-dom";
-import { SocialIcon } from "react-social-icons";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
+const Navbar = ({ toggle }) => {
+  return (
+    <nav
+      className='flex justify-between items-center h-16 bg-gray-900 text-white relative shadow-sm font-mono'
+      role='navigation'
+    >
+      <Link to='/' className='pl-8 hover:text-yellow-100'>
+        MOHAMMAD DABTI
+      </Link>
+      <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>
+        <svg
+          className='w-8 h-8'
+          fill='none'
+          stroke='currentColor'
+          viewBox='0 0 24 24'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='2'
+            d='M4 6h16M4 12h16M4 18h16'
+          />
+        </svg>
+      </div>
+      <div className='pr-8 md:block  hidden activeClassName="text-gray-100 bg-gray-700"'>
+        <Link to='/post' className='p-4 hover:text-yellow-100'>
+          BLOG
+        </Link>
+        <Link to='/project' className='p-4 hover:text-yellow-100' >
+          PROJECT
+        </Link>
+        <Link to='/about' className='p-4 hover:text-yellow-100' >
+          ABOUT ME!
+        </Link>
+      </div>
+    </nav>
+  );
+};
 
-function NavBar(){
-    return (
-        <header className="bg-gray-900">
-            <div className="container mx-auto flex justify-between">
-                <nav className="flex">
-                    <NavLink 
-                        to="/" 
-                        exact 
-                        activeClassName="text-white" 
-                        className="inline-flex items-center py-6 px-4 mr-8 text-red-100 hover:text-yellow-100 text-4xl font-bold cursive tracking-widest"
-                    >
-                        Mohammad
-                    </NavLink>
-                    <NavLink 
-                        to="/post" 
-                        className="inline-flex items-center py-3 px-3 my-6 rounden text-red-200 hover:text-yellow-100"
-                        activeClassName="text-gray-100 bg-gray-700"
-                    >
-                        Post 
-                    </NavLink>
-                    <NavLink 
-                        to="/project"
-                        className="inline-flex items-center py-3 px-3 my-6 rounden text-red-200 hover:text-yellow-100"
-                        activeClassName="text-gray-100 bg-gray-700"
-
-                    >
-                        Project
-                    </NavLink>
-                    <NavLink 
-                        to="/about" 
-                        className="inline-flex items-center py-3 px-3 my-6 rounden text-red-200 hover:text-yellow-100"
-                        activeClassName="text-gray-100 bg-gray-700"
-
-                    >
-                        About me!
-                    </NavLink>
-                </nav>
-                <div className= "inline-flex py-3 px-3 my-6">
-                    <SocialIcon 
-                        url="https://www.facebook.com/mohammad.dabti/" 
-                        className="mr-4" 
-                        target="_blank" 
-                        fgColor="#fff" 
-                        style={{height: 35,width: 35}} 
-                    />
-                    <SocialIcon 
-                        url="https://www.youtube.com/user/MohamadDabti" 
-                        className="mr-4" 
-                        target="_blank" 
-                        fgColor="#fff" 
-                        style={{height: 35,width: 35}} 
-                    />
-                    <SocialIcon 
-                        url="https://twitter.com/MDabti" 
-                        className="mr-4" 
-                        target="_blank" 
-                        fgColor="#fff" 
-                        style={{height: 35,width: 35}} 
-                    />
-                    <SocialIcon 
-                        url="https://www.linkedin.com/in/mohammad-dabti-509476215/" 
-                        className="mr-4" 
-                        target="_blank" 
-                        fgColor="#fff" 
-                        style={{height: 35,width: 35}} 
-                    />
-
-                </div>
-            </div>
-        </header>
-    )
-} 
-export default NavBar;
+export default Navbar;
