@@ -8,7 +8,7 @@ const Navbar = ({ toggle }) => {
       className='flex justify-between items-center h-16 bg-gray-900 text-white relative shadow-sm font-mono'
       role='navigation'
     >
-      <Link to='/' className='pl-8 hover:text-yellow-100'>
+      <Link to='/' className=' text-4xl pl-16 hover:text-yellow-100 font-bond cursive'>
         MOHAMMAD DABTI
       </Link>
       <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>
