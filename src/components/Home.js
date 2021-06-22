@@ -22,7 +22,7 @@ export default function Home(){
                 <h1 className="font-bold text-3xl text-gray-100">
                     I'm {" "}
                     <Typical
-                    steps={['Cyber security student', 2000,'Astrophotography',2000, 'Karate player',2000]}
+                    steps={['Cyber security student. 💻', 2000,'Astrophotography. 📸',2000, 'Karate player. 🥋🤜',2000]}
                     loop={Infinity}
                     className="inline-block"
                     />
