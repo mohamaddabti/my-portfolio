@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SocialIcon } from "react-social-icons";
+
 
 const Dropdown = ({ isOpen, toggle }) => {
   return (
@@ -20,6 +22,39 @@ const Dropdown = ({ isOpen, toggle }) => {
       <Link to='/about' className='p-4'>
         ABOUT ME!
       </Link>
+      <div className="flex-center">
+      <SocialIcon 
+          url="https://www.facebook.com/mohammad.dabti/" 
+          target="_blank" 
+          fgColor="#fff" 
+          style={{height: 35,width: 35}} 
+        />
+        <SocialIcon 
+          url="https://www.youtube.com/user/MohamadDabti" 
+          target="_blank" 
+          fgColor="#fff" 
+          style={{height: 35,width: 35}} 
+        />
+        <SocialIcon 
+          url="https://twitter.com/MDabti" 
+          target="_blank" 
+          fgColor="#fff" 
+          style={{height: 35,width: 35}} 
+        />
+        <SocialIcon 
+          url="https://www.linkedin.com/in/mohammad-dabti-509476215/" 
+          target="_blank" 
+          fgColor="#fff" 
+          style={{height: 35,width: 35}} 
+        />
+        <SocialIcon 
+          url="https://github.com/mohamaddabti" 
+          target="_blank" 
+          fgColor="#fff" 
+          style={{height: 35,width: 35}} 
+        />
+
+        </div>
     </div>
   );
 };
