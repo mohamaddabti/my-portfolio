@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SocialIcon } from "react-social-icons";
 
 const Navbar = ({ toggle }) => {
   return (
@@ -36,6 +37,41 @@ const Navbar = ({ toggle }) => {
         <Link to='/about' className='p-4 hover:text-yellow-100' >
           ABOUT ME!
         </Link>
+        <SocialIcon 
+          url="https://www.facebook.com/mohammad.dabti/" 
+          className="mr-4" 
+          target="_blank" 
+          fgColor="#fff" 
+          style={{height: 35,width: 35}} 
+        />
+        <SocialIcon 
+          url="https://www.youtube.com/user/MohamadDabti" 
+          className="mr-4" 
+          target="_blank" 
+          fgColor="#fff" 
+          style={{height: 35,width: 35}} 
+        />
+        <SocialIcon 
+          url="https://twitter.com/MDabti" 
+          className="mr-4" 
+          target="_blank" 
+          fgColor="#fff" 
+          style={{height: 35,width: 35}} 
+        />
+        <SocialIcon 
+          url="https://www.linkedin.com/in/mohammad-dabti-509476215/" 
+          className="mr-4" 
+          target="_blank" 
+          fgColor="#fff" 
+          style={{height: 35,width: 35}} 
+        />
+        <SocialIcon 
+          url="https://github.com/mohamaddabti" 
+          className="mr-4" 
+          target="_blank" 
+          fgColor="#fff" 
+          style={{height: 35,width: 35}} 
+        />
       </div>
     </nav>
   );
