@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SocialIcon } from "react-social-icons";
+import image from "../mdd.png"
 
 const Navbar = ({ toggle }) => {
   return (
@@ -9,6 +10,10 @@ const Navbar = ({ toggle }) => {
       role='navigation'
     >
       <Link to='/' className=' text-4xl pl-16 hover:text-yellow-100 font-bond cursive'>
+        <img src={image}
+        style={{height: 45,width: 45 }}
+        className="inline-block text-white"
+        />
         MOHAMMAD DABTI
       </Link>
       <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>
