@@ -13,6 +13,7 @@ const Navbar = ({ toggle }) => {
         <img src={image}
         style={{height: 45,width: 45 }}
         className="inline-block"
+        alt="logo"
         />
         MOHAMMAD DABTI
       </Link>
