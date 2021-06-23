@@ -12,7 +12,7 @@ const Navbar = ({ toggle }) => {
       <Link to='/' className=' text-4xl pl-16 hover:text-yellow-100 font-bond cursive'>
         <img src={image}
         style={{height: 45,width: 45 }}
-        className="inline-block text-white"
+        className="inline-block"
         />
         MOHAMMAD DABTI
       </Link>
