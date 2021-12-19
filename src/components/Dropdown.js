@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SocialIcon } from "react-social-icons";
+import '../index.css'
 
 
 const Dropdown = ({ isOpen, toggle }) => {
@@ -8,7 +9,7 @@ const Dropdown = ({ isOpen, toggle }) => {
     <div
       className={
         isOpen
-          ? 'grid grid-rows-4 text-center items-center bg-white-800'
+          ? 'grid grid-rows-4 text-center items-center bg-gray-900'
           : 'hidden'
       }
       onClick={toggle}

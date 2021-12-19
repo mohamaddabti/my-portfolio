@@ -14,3 +14,18 @@
 .home-name {
   font-size: 150px;
 }
+
+a {
+  color: currentcolor; 
+  text-decoration: none !important;
+}
+.thelink{
+  color: rgb(61, 58, 58);
+}
+.thelink :hover{
+  color: rgb(199, 34, 12);
+  text-emphasis-color: red;
+  }
+  .foot{
+    margin-top: 473px;
+  }

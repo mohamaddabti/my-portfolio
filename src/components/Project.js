@@ -1,5 +1,6 @@
 import React, {useEffect, useState } from "react";
 import sanityClient  from "../client.js";
+import '../index.css'
 
 export default function Project(){
     const [projectData, setProjectData] = useState(null);
@@ -18,15 +19,15 @@ export default function Project(){
     }, []);
     
     return (
-        <main className="bg-green-100 min-h-screen p-12">
+        <main className="project bg-green-100 min-h-screen p-12">
             <section className=" container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive"> My Projects</h1>
                 <h2 className=" text-lg text-gray-600 flex justify-center mb-12">Welcome to my projects page!</h2>
                 <section className=" grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projectData && projectData.map((project, index) => (
                         <article className=" relative rounded-lg shadow-xl bg-white p-16">
-                            <h3 className="text-gray800 text-3xl font-bold mb-2 hover:text-red-700">
-                                <a 
+                            <h3 className="text-slate-800 text-3xl font-bold mb-2 hover:text-red-700">
+                                <a className="thelink hover:text-red-700"
                                 href={project.link}
                                 alt={project.title}
                                 target="_blank"

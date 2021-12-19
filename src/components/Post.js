@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient  from "../client.js";
+import '../index.css'
 
 
 
@@ -23,7 +24,7 @@ function Post(){
         .catch(console.error);
     }, []);
     return (
-        <main className="bg-blue-100 min-h-screen p-12">
+        <main className="post bg-blue-100 min-h-screen p-12">
             <section className="container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive">Blog Posts Page</h1>
                 <h1 className="text-lg text-gray-600 flex justify-center mb-12">Welcome to my Blog</h1>
