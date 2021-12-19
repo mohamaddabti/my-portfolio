@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SocialIcon } from "react-social-icons";
-import image from "../mdd.png"
+import image from "../media/mdd.png"
 
 const Navbar = ({ toggle }) => {
   return (

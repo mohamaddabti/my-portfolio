@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import sanityClient  from "../client.js";
 import imageUrlBuilder  from "@sanity/image-url";
-import Galaxy from "../Galaxy.jpg"
+import Galaxy from "../media/Galaxy.jpg" 
 import BlockContent from "@sanity/block-content-to-react"
 
 const builder = imageUrlBuilder(sanityClient);

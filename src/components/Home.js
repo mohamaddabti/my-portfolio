@@ -1,6 +1,6 @@
 import React from "react";
 //import image from "../wall.jpg";
-import video from "../video-1.mp4";
+import video from "../media/video-1.mp4";
 import Typical from "react-typical";
 
 export default function Home(){
