@@ -7,11 +7,11 @@ import '../index.css'
 const Navbar = ({ toggle }) => {
   return (
     
-    <nav
-      className='navbar justify-content-between h-16 bg-gray-900 text-white '
+    <nav id='navColor'
+      className='navbar flex-wrap justify-content-between h-16 shadow p-3 mb-2 rounded'
       role='navigation'
     >
-      <Link to='/' className=' text-4xl pl-16 text-gray-50 hover:text-red-50 font-bond cursive'>
+      <Link to='/' className=' text-4xl pl-16 text-gray-900 hover:text-gray-50 font-bond cursive'>
         <img src={image}
         style={{height: 45,width: 45 }}
         className="inline-block"
@@ -35,16 +35,18 @@ const Navbar = ({ toggle }) => {
           />
         </svg>
       </div>
-      <div className='pr-8 lg:block  hidden activeClassName="text-gray-100 bg-gray-700" text-white'>
-        <Link to='/post' className='text-gray-50 p-4 hover:text-red-100 '>
+      <div className='blog pr-8 lg:block  hidden activeClassName="text-gray-100 bg-gray-700" text-white'>
+        
+        <Link to='/post' className='text-gray-900 p-4 hover:text-gray-50'>
           BLOG
         </Link>
-        <Link to='/project' className='text-gray-50 p-4 hover:text-red-100' >
+        <Link to='/project' className='project text-gray-900 p-4 hover:text-gray-50' >
           PROJECT
         </Link>
-        <Link to='/about' className='text-gray-50 p-4 hover:text-red-100' >
+        <Link to='/about' className='about text-gray-900 p-4  hover:text-gray-50' >
           ABOUT ME!
         </Link>
+        
         <SocialIcon 
           url="https://www.facebook.com/mohammad.dabti/" 
           className="mr-4" 

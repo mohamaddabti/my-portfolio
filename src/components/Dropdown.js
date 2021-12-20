@@ -9,18 +9,18 @@ const Dropdown = ({ isOpen, toggle }) => {
     <div
       className={
         isOpen
-          ? 'grid grid-rows-4 text-center items-center bg-gray-900'
+          ? 'deop grid grid-rows-4 text-center items-center '
           : 'hidden'
       }
       onClick={toggle}
     >
-      <Link to='/post' className='p-4'>
+      <Link to='/post' className='p-4 text-gray-50 hover:text-red-100'>
         BLOG
       </Link>
-      <Link to='/project' className='p-4'>
+      <Link to='/project' className='p-4 text-gray-50 hover:text-red-100'>
         PROJECT
       </Link>
-      <Link to='/about' className='p-4'>
+      <Link to='/about' className='p-4 text-gray-50 hover:text-red-100'>
         ABOUT ME!
       </Link>
       <div className="flex-center">
@@ -40,7 +40,7 @@ const Dropdown = ({ isOpen, toggle }) => {
           url="https://twitter.com/MDabti" 
           target="_blank" 
           fgColor="#fff" 
-          style={{height: 35,width: 35}} 
+          style={{height: 35,width: 35 }} 
         />
         <SocialIcon 
           url="https://www.linkedin.com/in/mohammad-dabti-509476215/" 
