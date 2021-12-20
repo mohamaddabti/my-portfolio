@@ -113,6 +113,11 @@ body {
 #navColor{
   background-color: #c0972c;
 }
+@media (max-width: 360px) {
+  #navlogo {
+    margin-right: 40px;
+  }
+}
 
 /* ==== HOME ==== 
 .home{

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SocialIcon } from "react-social-icons";
-import image from "../media/mdd.png"
+//import image from "../media/mdd.png"
 import '../index.css'
 
 const Navbar = ({ toggle }) => {
@@ -11,12 +11,8 @@ const Navbar = ({ toggle }) => {
       className='navbar flex-wrap justify-content-between h-16 shadow p-3 mb-2 rounded'
       role='navigation'
     >
-      <Link to='/' className=' text-4xl pl-16 text-gray-900 hover:text-gray-50 font-bond cursive'>
-        <img src={image}
-        style={{height: 45,width: 45 }}
-        className="inline-block"
-        alt="logo"
-        />
+      <Link to='/' className='navlogo text-4xl pl-16 text-gray-900 hover:text-gray-50 font-bond cursive'>
+        
         MOHAMMAD DABTI
       </Link>
       <div className='px-4 cursor-pointer lg:hidden' onClick={toggle}>
