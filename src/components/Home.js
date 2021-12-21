@@ -110,7 +110,7 @@ export default function Home(){
                                     </a>
                         </div>
                         <span class="phone__number">
-                        <i class="bx bxs-phone"></i>
+                        <i class="bx bxs-phone bx-tada-hover"></i>
                         +47 40981256
                         </span>
                         <p>© 2021 copyright all right reserved</p>

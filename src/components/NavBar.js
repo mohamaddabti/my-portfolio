@@ -13,7 +13,7 @@ const Navbar = ({ toggle }) => {
     >
       <Link to='/' className='navlogo text-4xl pl-16 text-gray-900 hover:text-gray-50 font-bond cursive'>
         
-        MOHAMMAD DABTI
+      {"{"}MOHAMMAD DABTI{"}"}
       </Link>
       <div className='px-4 cursor-pointer lg:hidden' onClick={toggle}>
         <svg
