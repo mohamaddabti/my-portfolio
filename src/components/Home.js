@@ -28,8 +28,15 @@ export default function Home(){
                                 <span className="spancolor">
                                     {" "}
                                     <Typical
-                                    steps={['Cyber security student. 💻', 2000,'Astrophotography. 📸',2000, 'Karate player. 🥋🤜',2000]}
                                     loop={Infinity}
+                                    wrapper='f'
+                                    steps={['Cyber security student. 💻',
+                                    1500,
+                                    'Astrophotography. 📸',
+                                    1500, 
+                                    'Karate player. 🥋🤜',
+                                    1500]}
+                                    
                                     className="inline-block"
                                     />                           
                                 </span>
