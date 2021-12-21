@@ -75,7 +75,7 @@ export default function Home(){
                                 </ul>
                             </div>
                             <div className="home-img rounded w-32 h-32 lg:w-60 lg:h-60 mr-8">
-                                <img src={me} alt="profile" />
+                                <img className="me" src={me} alt="profile" />
                             </div>
                         </div> 
                         <br></br><br></br><br></br><br></br><br></br>
@@ -89,10 +89,12 @@ export default function Home(){
                                 <h4 className="text-dark skill pr-8 skills-content bx bxl-javascript bx-burst-hover">JAVASCRIPT</h4><br></br>
                                 <h4 className="text-dark skill  pr-8 skills-content bx bxl-jquery bx-burst-hover">JQUERY</h4>
                                 <h4 className="text-dark skill  pr-8 skills-content bx bxs-data bx-burst-hover">SQL</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-react bx-burst-hover">REACT JS</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-nodejs bx-burst-hover">NODE JS</h4><br></br>
+                                <h4 className="text-dark skill pr-8 skills-content bx bxl-react bx-burst-hover">REACT JS</h4><br></br>
+                                <h4 className="text-dark skill pr-8 skills-content bx bxl-nodejs bx-burst-hover">NODE JS</h4>
                                 <h4 className="text-dark skill pr-8 skills-content bx bxl-bootstrap bx-burst-hover">BOOTSTRAP</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-github bx-burst-hover">GIT {"&"} GITHUB </h4>
+                                <h4 className="text-dark skill pr-8 skills-content bx bxl-github bx-burst-hover">GIT {"&"} GITHUB </h4><br></br>
+                                <h4 className="text-dark skill  pr-8 skills-content bx bx-station bx-burst-hover">CCNA</h4>
+                                <h4 className="text-dark skill  pr-8 skills-content bx bx-terminal bx-burst-hover">Linux</h4>
                                 <h4 className="text-dark skill pr-8 skills-content bx bxl-adobe bx-burst-hover">ADOBE PHOTOSHOP</h4><br></br>
                                 </div>
                             </div>

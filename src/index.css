@@ -189,6 +189,11 @@ body {
   font-size: var(--big-font-size);
 }
 
+.me{
+  border-radius: 50%;
+  margin-bottom: 50px;
+  border: 1vh solid #232d3622;
+}
 .home-img {
   width: 25%;
 }
