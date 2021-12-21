@@ -87,7 +87,7 @@ body {
   margin-left: auto;
 }
 
-/* SMALL */
+/* ==== SMALL ==== */
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -96,20 +96,20 @@ body {
     width: 50% !important;
   }
 }
-/* MEDIUM */
+/* ==== MEDIUM ==== */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
-/* LARGE */
+/* ==== LARGE ==== */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
 }
 
-
+/* ==== navColor ==== */
 #navColor{
   background-color: #c0972c;
 }
@@ -256,7 +256,7 @@ body {
 }
 
 
-/* POST  */
+/* ==== POST ==== */
 .postcolor{
   background-color: #c0972c !important;
   color: black;
@@ -310,4 +310,28 @@ footer p {
 .phone__number i {
   font-size: var(--h2-font-size);
   margin-right: 10px;
+}
+
+
+ /* ==== Scroller Color ====*/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0 transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0972c;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
