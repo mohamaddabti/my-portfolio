@@ -86,16 +86,17 @@ export default function Home(){
                             <div className="container justify-content-between ">
                                 <h4 className="text-dark skill pr-8 skills-content bx bxl-html5 bx-burst-hover">HTML</h4>
                                 <h4 className="text-dark skill pr-8 skills-content bx bxl-css3 bx-burst-hover">CSS</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-javascript bx-burst-hover">JAVASCRIPT</h4><br></br>
-                                <h4 className="text-dark skill  pr-8 skills-content bx bxl-jquery bx-burst-hover">JQUERY</h4>
+                                <h4 className="text-dark skill pr-8 skills-content bx bxl-javascript bx-burst-hover">JavaScript</h4><br></br>
+                                <h4 className="text-dark skill  pr-8 skills-content bx bxl-jquery bx-burst-hover">jQuery</h4>
                                 <h4 className="text-dark skill  pr-8 skills-content bx bxs-data bx-burst-hover">SQL</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-react bx-burst-hover">REACT JS</h4><br></br>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-nodejs bx-burst-hover">NODE JS</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-bootstrap bx-burst-hover">BOOTSTRAP</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-github bx-burst-hover">GIT {"&"} GITHUB </h4><br></br>
+                                <h4 className="text-dark skill pr-8 skills-content bx bxl-react bx-burst-hover">React JS</h4><br></br>
+                                <h4 className="text-dark skill pr-8 skills-content bx bxl-nodejs bx-burst-hover">Node JS</h4>
+                                <h4 className="text-dark skill pr-8 skills-content bx bxl-bootstrap bx-burst-hover">Bootstrap</h4>
+                                <h4 className="text-dark skill pr-8 skills-content bx bxl-github bx-burst-hover">GIT {"&"} Github </h4><br></br>
                                 <h4 className="text-dark skill  pr-8 skills-content bx bx-station bx-burst-hover">CCNA</h4>
                                 <h4 className="text-dark skill  pr-8 skills-content bx bx-terminal bx-burst-hover">Linux</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-adobe bx-burst-hover">ADOBE PHOTOSHOP</h4><br></br>
+                                <h4 className="text-dark skill  pr-8 skills-content bx bxs-terminal bx-burst-hover">PowerShell</h4>
+                                <h4 className="text-dark skill pr-8 skills-content bx bxl-adobe bx-burst-hover">Photoshop</h4><br></br>
                                 </div>
                             </div>
                         </div>
