@@ -7,6 +7,8 @@ import Project from "./components/Project";
 import SinglePost from "./components/SinglePost";
 import NavBar from "./components/NavBar";
 import Dropdown from './components/Dropdown';
+import Gallery from "./components/Gallery";
+import SinglePhoto from './components/singelPhoto';
 
 
 
@@ -43,6 +45,8 @@ function App() {
           <Route component={SinglePost} path = '/post/:slug'/>
           <Route component={Post} path = '/post'/>
           <Route component={Project} path = '/project'/>
+          <Route component={Gallery} path = '/Gallery'/>
+          <React component={SinglePhoto} path= '/SinglePhoto'></React>
         </Switch>
     </BrowserRouter>
   )
