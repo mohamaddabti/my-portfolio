@@ -45,8 +45,9 @@ function App() {
           <Route component={SinglePost} path = '/post/:slug'/>
           <Route component={Post} path = '/post'/>
           <Route component={Project} path = '/project'/>
+          <Route component={SinglePhoto} path= '/Gallery/:slug'/>
           <Route component={Gallery} path = '/Gallery'/>
-          <React component={SinglePhoto} path= '/SinglePhoto'></React>
+          
         </Switch>
     </BrowserRouter>
   )

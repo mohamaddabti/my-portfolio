@@ -44,17 +44,14 @@ export default function SinglePhoto(){
                                 {singlePhoto.title}
                             </h1>
                             <div className="flex justify-center text-gray-800">
-                                <img src={urlFor(singlePhoto.authorImage).url()}
-                                alt={singlePhoto.name}
-                                className="w-10 h-10 rounded-full"
-                                /> 
+                                
                                 <p className="cursive flex items-center pl-2 text-2xl">
                                     {singlePhoto.name}
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <img src={singlePhoto.mainImage}
+                    <img src={singlePhoto.mainImage.asset.url}
                     alt={singlePhoto.title}
                     className="w-full object-cover rounded-t"
                     style={{height: "400px"}}
@@ -62,10 +59,11 @@ export default function SinglePhoto(){
                 </header>
                 <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
                     <BlockContent 
-                    blocks={singlePhoto.body}     
+                    blocks={singlePhoto.body}
                     projectId= "ncdfzity" 
                     dataset= "production"/>
                 </div>
+
             </article>
         </main>
     );

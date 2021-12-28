@@ -1,20 +1,43 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import sanityClient  from "../client.js";
 import '../index.css'
+import '../Slider.css'
+import BtnSlider from './BtnSlider'
+import dataSlider from './dataSlider'
 
-export default function Gallery(){
-    const [galleryData, setGalleryData] = useState(null);
 
-    useEffect(() => {
+
+function Gallery(){
+    const [photoData, setPhoto] = useState(null);
+    const [slideIndex, setSlideIndex] = useState(1)
+    const nextSlide = () => {
+        if(slideIndex !== dataSlider.length){
+            setSlideIndex(slideIndex + 1)
+        } 
+        else if (slideIndex === dataSlider.length){
+            setSlideIndex(1)
+        }
+    }
+
+    const prevSlide = () => {
+        if(slideIndex !== 1){
+            setSlideIndex(slideIndex - 1)
+        }
+        else if (slideIndex === 1){
+            setSlideIndex(dataSlider.length)
+        }
+    }
+
+    const moveDot = index => {
+        setSlideIndex(index)
+    }
+
+    useEffect(() =>{
         sanityClient.fetch(`*[_type == "gallery"]{
             title,
             slug,
-            date,
-            place,
-            tags,
-            description,
-            mainPhoto{
+            mainImage{
                 asset->{
                     _id,
                     url
@@ -22,46 +45,54 @@ export default function Gallery(){
                 alt
             }
         }`)
-        .then((data) => setGalleryData(data))
+        .then((data) => setPhoto(data))
         .catch(console.error);
     }, []);
-
     return (
-        <main className="project min-h-screen p-12">
-            <section className=" container mx-auto text-white">
-                <h1 className="text-5xl flex justify-center cursive"> Gallery</h1>
-                <h2 className=" text-lg text-gray-50 flex justify-center mb-12">still working on it ^_^</h2>
-                    {galleryData && galleryData.map((gallery, index) => (
-                        <article>
-                            <Link to={"/gallery/" + gallery.slug.current} key={gallery.slug.current}>
-
-                                <span className="postcolor block h-64 relative rounded shadow leading-snug border-l-8" key={index}>
+        <>
+                <div className="container-slider"> 
+                    {photoData && photoData.map((photo, index) => {
+                        return(
+                            <div
+                            key={photo}
+                            className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
+                            >
+                                <img src={photo.mainImage.asset.url}
+                                    alt={photo.mainImage}
+                                />
+                            </div>
+                        )
+                        
+                    })}
+                    <BtnSlider moveSlide={nextSlide} direction={"next"}/>
+                    <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
+                    <div className="container-dots">
+                        {Array.from({length: 5}).map((photo, index) => (
+                            <div 
+                            onClick={() => moveDot(index + 1)}
+                            className={slideIndex === index + 1 ? "dot active" : "dot"}
+                            ></div>
+                         ))}
+                    </div>
+                </div>
+                <div className="post min-h-screen p-12 text-white">
+                <section className="container mx-auto">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {photoData && photoData.map((photo, index) => (
+                        
+                                <span className="postcolor block h-64 relative rounded shadow leading-snug " key={index}>
                                     <img 
-                                    src={gallery.mainPhoto}
-                                    alt={gallery.mainPhoto}
+                                    src={photo.mainImage.asset.url}
+                                    alt={photo.mainImage.alt}
                                     className="w-full h-full rounded-r object-cover absolute"
                                     />
                                 </span>
-                            
-                            <div className="text-gray-900 text-xs space-x-4">
-                                <span>
-                                    <strong className="font-bold">Finished on</strong>:{" "}
-                                    {new Date(gallery.date).toLocaleDateString()}
-                                </span>
-                                <span>
-                                    <strong className="font-bold">Company</strong>:{" "}
-                                    {gallery.place}
-                                </span>
-                                <p className="my-6 text-lg text-gray-900 leading-relaxed">
-                                    {gallery.description}
-                                </p>
-                                
-                            </div>
-                            </Link>
-                        </article>
                     ))}
-                
-            </section>
-        </main>
+                    </div>
+                </section>
+                </div>
     )
+    </>
+    )  
 } 
+export default Gallery;
