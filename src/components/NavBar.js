@@ -36,6 +36,10 @@ const Navbar = ({ toggle }) => {
         <Link to='/post' className='text-gray-900 p-4 hover:text-gray-50'>
           BLOG
         </Link>
+        <Link to='/gallery' className='Gallery text-gray-900 p-4 hover:text-gray-50' >
+          Gallery
+        </Link>
+
         <Link to='/project' className='project text-gray-900 p-4 hover:text-gray-50' >
           PROJECT
         </Link>

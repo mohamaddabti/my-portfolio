@@ -17,6 +17,9 @@ const Dropdown = ({ isOpen, toggle }) => {
       <Link to='/post' className='p-4 text-gray-50 hover:text-red-100'>
         BLOG
       </Link>
+      <Link to='/gallery' className='p-4 text-gray-50 hover:text-red-100'>
+        Gallery
+      </Link>
       <Link to='/project' className='p-4 text-gray-50 hover:text-red-100'>
         PROJECT
       </Link>

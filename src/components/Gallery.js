@@ -5,6 +5,8 @@ import '../index.css'
 import '../Slider.css'
 import BtnSlider from './BtnSlider'
 import dataSlider from './dataSlider'
+import SimpleReactLightbox from 'simple-react-lightbox'
+import { SRLWrapper } from "simple-react-lightbox";
 
 
 
@@ -75,24 +77,28 @@ function Gallery(){
                          ))}
                     </div>
                 </div>
+                <SimpleReactLightbox>
+                <SRLWrapper>
                 <div className="post min-h-screen p-12 text-white">
-                <section className="container mx-auto">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {photoData && photoData.map((photo, index) => (
-                        
+                    <section className="container mx-auto">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {photoData && photoData.map((photo, index) => (
+                                
                                 <span className="postcolor block h-64 relative rounded shadow leading-snug " key={index}>
                                     <img 
-                                    src={photo.mainImage.asset.url}
-                                    alt={photo.mainImage.alt}
-                                    className="w-full h-full rounded-r object-cover absolute"
+                                        src={photo.mainImage.asset.url}
+                                        alt={photo.mainImage.alt}
+                                        className="w-full h-full rounded-r object-cover absolute"
                                     />
                                 </span>
-                    ))}
-                    </div>
-                </section>
+                            ))}
+                        </div>
+                    </section>
                 </div>
+                </SRLWrapper>
+                </SimpleReactLightbox>
     )
-    </>
+        </>
     )  
 } 
 export default Gallery;
