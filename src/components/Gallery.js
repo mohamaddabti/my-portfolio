@@ -98,6 +98,6 @@ function Gallery(){
                 </SimpleReactLightbox>
     )
         </>
-    )  
-} 
+    )
+}
 export default Gallery;
