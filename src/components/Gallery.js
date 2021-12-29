@@ -44,7 +44,8 @@ function Gallery(){
                     url
                 },
                 alt
-            }
+            },
+            description,
         }`)
         .then((data) => setPhoto(data))
         .catch(console.error);
@@ -77,24 +78,30 @@ function Gallery(){
                     </div>
                 </div>
                 <SimpleReactLightbox>
-                <SRLWrapper>
-                <div className="min-h-screen p-12 text-white">
-                    <section className="container mx-auto">
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {photoData && photoData.map((photo, index) => (
-                                
-                                <span className="block h-64 relative rounded shadow leading-snug " key={index}>
-                                    <img 
-                                        src={photo.mainImage.asset.url}
-                                        alt={photo.mainImage.alt}
-                                        className="w-full h-full rounded-r object-cover absolute"
-                                    />
-                                </span>
-                            ))}
-                        </div>
-                    </section>
-                </div>
-                </SRLWrapper>
+                    <SRLWrapper>
+                    <div className="min-h-screen p-12 text-white">
+                        <section className="container mx-auto">
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {photoData && photoData.map((photo, index) => (
+                                    <span className="block h-64 relative rounded shadow leading-snug " key={index}>
+                                        <div class="snip1577">
+                                            <img
+                                            src={photo.mainImage.asset.url}
+                                            alt={photo.description}
+                                            className="w-full h-full rounded-r object-cover absolute"
+                                            />
+                                            <figcaption>
+                                                <h3>{photo.title}</h3>
+                                            </figcaption>
+                                        </div>
+
+                                    </span>
+                                    
+                                ))}
+                            </div>
+                        </section>
+                    </div>
+                    </SRLWrapper>
                 </SimpleReactLightbox>
     )
         </>
