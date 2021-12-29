@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar";
 import Dropdown from './components/Dropdown';
 import Gallery from "./components/Gallery";
 import SinglePhoto from './components/singelPhoto';
+import ScrollTopArrow from './components/ScrollTopArrow';
 
 
 
@@ -36,7 +37,9 @@ function App() {
   });
   
   return (
+    
     <BrowserRouter>
+    <ScrollTopArrow/>
       <NavBar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
         <Switch>
@@ -51,6 +54,7 @@ function App() {
         </Switch>
     </BrowserRouter>
   )
+  
 }
 
 export default App;
