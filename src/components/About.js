@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import sanityClient  from "../client.js";
 import imageUrlBuilder  from "@sanity/image-url";
-import Galaxy from "../media/stars.jpg" 
 import BlockContent from "@sanity/block-content-to-react"
 import '../index.css'
 
@@ -42,7 +41,7 @@ export default function About(){
                             //projectId= "ncdfzity" 
                             //dataset= "production"
                             />
-                            <h5> A Cyber security student at  <a target="_blank" class="ntnu" href="https://www.ntnu.no/">NTNU</a> </h5>
+                            <h5> A Cyber security student at  <a target="_blank" rel="noreferrer" className="ntnu" href="https://www.ntnu.no/">NTNU</a> </h5>
                         </div>
                     </div>
                     <div className="foot">

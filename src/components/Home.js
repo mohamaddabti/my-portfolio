@@ -51,6 +51,7 @@ export default function Home(){
                                     <a
                                     href="https://github.com/mohamaddabti"
                                     target="_blank"
+                                    rel="noreferrer"
                                     >
                                     <i className="bx bxl-github bx-spin-hover text-white"></i>
                                     </a>
@@ -59,6 +60,7 @@ export default function Home(){
                                     <a
                                     href="https://www.linkedin.com/in/mohammad-dabti-509476215/"
                                     target="_blank"
+                                    rel="noreferrer"
                                     >
                                     <i className="bx bxl-linkedin-square bx-spin-hover text-white"></i>
                                     </a>
@@ -68,6 +70,7 @@ export default function Home(){
                                     href="https://www.facebook.com/mohammad.dabti/"
                                     className="cv text-dark bx bxl-facebook bx-spin-hover bg-white"
                                     target="_blank"
+                                    rel="noreferrer"
                                     >
                                     
                                     </a>
@@ -80,9 +83,9 @@ export default function Home(){
                         </div> 
                         <br></br><br></br><br></br><br></br><br></br>
                         
-                        <span class="section-title text-dark">&lt; Skills /{">"}</span><br></br><br></br>
-                        <div class="container">
-                            <div class="skills-content ">
+                        <span className="section-title text-dark">&lt; Skills /{">"}</span><br></br><br></br>
+                        <div className="container">
+                            <div className="skills-content ">
                             <div className="container justify-content-between ">
                                 <h4 className="text-dark skill pr-8 skills-content bx bxl-html5 bx-burst-hover">HTML</h4>
                                 <h4 className="text-dark skill pr-8 skills-content bx bxl-css3 bx-burst-hover">CSS</h4>
@@ -103,24 +106,26 @@ export default function Home(){
                     </div> 
                 </section>
                 <footer>
-                    <div class="container text-dark">
-                        <h2 class="footer__title ">MOHAMMAD DABTI</h2>
-                        <div class="footer__social">
+                    <div className="container text-dark">
+                        <h2 className="footer__title ">MOHAMMAD DABTI</h2>
+                        <div className="footer__social">
                         <a
                                     href="https://github.com/mohamaddabti"
                                     target="_blank"
+                                    rel="noreferrer"
                                     >
                                     <i className="bx bxl-github bx-spin-hover text-dark"></i>
                                     </a>
                                     <a
                                     href="https://www.linkedin.com/in/mohammad-dabti-509476215/"
                                     target="_blank"
+                                    rel="noreferrer"
                                     >
                                     <i className="bx bxl-linkedin-square bx-spin-hover text-dark"></i>
                                     </a>
                         </div>
-                        <span class="phone__number">
-                        <i class="bx bxs-phone bx-tada-hover"></i>
+                        <span className="phone__number">
+                        <i className="bx bxs-phone bx-tada-hover"></i>
                         +47 40981256
                         </span>
                         <p>© 2021 copyright all right reserved</p>

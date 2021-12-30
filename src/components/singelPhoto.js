@@ -51,7 +51,7 @@ export default function SinglePhoto(){
                             </div>
                         </div>
                     </div>
-                    <img src={singlePhoto.mainImage.asset.url}
+                    <img src={urlFor(singlePhoto.authorImage).url()}
                     alt={singlePhoto.title}
                     className="w-full object-cover rounded-t"
                     style={{height: "400px"}}

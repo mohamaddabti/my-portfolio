@@ -50,6 +50,7 @@ function Gallery(){
         .then((data) => setPhoto(data))
         .catch(console.error);
     }, []);
+
     return (
         <>
                 <div className="container-slider"> 
@@ -84,7 +85,7 @@ function Gallery(){
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                                 {photoData && photoData.map((photo, index) => (
                                     <span className="block h-64 relative rounded shadow leading-snug " key={index}>
-                                        <div class="snip1577">
+                                        <div className="snip1577">
                                             <img
                                             src={photo.mainImage.asset.url}
                                             alt={photo.description}
