@@ -128,7 +128,7 @@ export default function Home(){
                         <i className="bx bxs-phone bx-tada-hover"></i>
                         +47 40981256
                         </span>
-                        <p>© 2021 copyright all right reserved</p>
+                        <p>© 2022 copyright all right reserved</p>
                     </div>
                 </footer>
 
