@@ -41,8 +41,8 @@ function Post(){
                                     className="w-full h-full rounded-r object-cover absolute"
                                     />
                                     <span className="block relative h-full flex justify-end items-end pr-4 pb-4">
-                                        <h3 className="postcolor ">
-                                        {post.title}</h3>
+                                        <h5 className=" text-white">
+                                        {post.title}</h5>
                                     </span>
                                 </span>
                             </Link>
