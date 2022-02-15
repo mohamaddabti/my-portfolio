@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import sanityClient  from "../client.js";
 import Typical from "react-typical";
 import '../index.css';
 import me from "../media/me.png" 
 
-  
+
 export default function Home(){
+    const [skillsData, setskills] = useState(null);
+
+    useEffect(() =>{
+        sanityClient.fetch(`*[_type == "skills"]{
+            title,
+            mainImage{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            }
+        }`)
+        .then((data) => setskills(data))
+        .catch(console.error);
+    }, []);
+
     
     return (
         <main className="home ">
@@ -83,25 +101,23 @@ export default function Home(){
                         </div> 
                         <br></br><br></br><br></br><br></br><br></br>
                         
-                        <span className="section-title text-dark">&lt; Skills /{">"}</span><br></br><br></br>
-                        <div className="container">
-                            <div className="skills-content ">
-                            <div className="container justify-content-between ">
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-html5 bx-burst-hover">HTML</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-css3 bx-burst-hover">CSS</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-javascript bx-burst-hover">JavaScript</h4><br></br>
-                                <h4 className="text-dark skill  pr-8 skills-content bx bxl-jquery bx-burst-hover">jQuery</h4>
-                                <h4 className="text-dark skill  pr-8 skills-content bx bxs-data bx-burst-hover">SQL</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-react bx-burst-hover">React JS</h4><br></br>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-nodejs bx-burst-hover">Node JS</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-bootstrap bx-burst-hover">Bootstrap</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-github bx-burst-hover">GIT {"&"} Github </h4><br></br>
-                                <h4 className="text-dark skill  pr-8 skills-content bx bx-station bx-burst-hover">CCNA</h4>
-                                <h4 className="text-dark skill  pr-8 skills-content bx bx-terminal bx-burst-hover">Linux</h4>
-                                <h4 className="text-dark skill  pr-8 skills-content bx bxs-terminal bx-burst-hover">PowerShell</h4>
-                                <h4 className="text-dark skill pr-8 skills-content bx bxl-adobe bx-burst-hover">Photoshop</h4><br></br>
-                                </div>
-                            </div>
+                        <span className="section-title text-dark">&lt; Skills /{">"}</span><br/><br/><br/>
+                        <div className="d-flex flex-wrap"> 
+                            {skillsData && skillsData.map((skill, index) => (
+                                <article>
+                                        <span className=" flex p-2 shadow " key={index}>
+                                            <img 
+                                            src={skill.mainImage.asset.url}
+                                            alt={skill.mainImage.alt}
+                                            className="h-10 w-10"
+                                            />
+                                            <span className="p-2">
+                                                <h5 className=" text-white">
+                                                {skill.title}</h5>
+                                            </span>
+                                        </span>
+                                </article>
+                            ))}
                         </div>
                     </div> 
                 </section>
@@ -109,7 +125,7 @@ export default function Home(){
                     <div className="container text-dark">
                         <h2 className="footer__title ">MOHAMMAD DABTI</h2>
                         <div className="footer__social">
-                        <a
+                                    <a
                                     href="https://github.com/mohamaddabti"
                                     target="_blank"
                                     rel="noreferrer"
