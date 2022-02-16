@@ -48,12 +48,12 @@ export default function Home(){
                                     <Typical
                                     loop={Infinity}
                                     wrapper='f'
-                                    steps={['Cyber security student. 💻',
-                                    1500,
-                                    'Astrophotography. 📸',
-                                    1500, 
-                                    'Karate player. 🥋🤜',
-                                    1500]}
+                                    steps={['Cyber security student 💻',
+                                    2000,
+                                    'Astrophotography 📸',
+                                    2000, 
+                                    'Karate player 🥋🤜',
+                                    2000]}
                                     
                                     className="inline-block"
                                     />                           
