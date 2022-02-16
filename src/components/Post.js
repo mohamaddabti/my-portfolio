@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient  from "../client.js";
-import '../index.css'
-import '../Slider.css'
 
 
 
@@ -40,8 +38,8 @@ function Post(){
                                     alt={post.mainImage.alt}
                                     className="w-full h-full rounded-r object-cover absolute"
                                     />
-                                    <span className="block relative h-full flex justify-end items-end pr-4 pb-4">
-                                        <h5 className=" text-white">
+                                    <span className="block relative h-full flex justify-center items-end pr-4 pb-4 ">
+                                        <h5 className=" text-white ">
                                         {post.title}</h5>
                                     </span>
                                 </span>
