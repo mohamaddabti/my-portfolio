@@ -8,7 +8,7 @@ const Navbar = ({ toggle }) => {
   return (
     
     <nav id='navColor'
-      className='navbar flex-wrap justify-content-between h-16 shadow p-3 mb-2 rounded'
+      className='navbar flex-wrap justify-content-between h-16 shadow p-2 mb-2 rounded'
       role='navigation'
     >
       <Link to='/' className='navlogo text-4xl pl-16 text-gray-900 hover:text-gray-50 font-bond cursive'>

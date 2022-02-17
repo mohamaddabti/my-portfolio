@@ -19,7 +19,7 @@ export default function Project(){
     }, []);
     
     return (
-        <main className="project min-h-screen p-12">
+        <main className="project min-h-screen p-3">
             <section className=" container mx-auto text-white">
                 <h1 className="text-5xl flex justify-center cursive"> My Projects</h1>
                 <h2 className=" text-lg text-gray-50 flex justify-center mb-12">Welcome to my projects page!</h2>
