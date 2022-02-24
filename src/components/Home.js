@@ -63,6 +63,8 @@ export default function Home(){
                                 programming and modern web technologies and I built some projects
                                 that increased my experience and I train constantly, I am a quick
                                 learner and I always like to develop myself..
+                                <br/>
+                                <a rel="noreferrer" className="contact p-0.5 hover:text-red" href="https://mohammaddabti.netlify.app/Contact"> Get in touch with me!</a> 
                                 </p>
                                 <ul className="home-social">
                                 <li>

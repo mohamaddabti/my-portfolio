@@ -377,3 +377,12 @@ footer p {
 
   }
 }
+
+.contact{
+  color: black;
+  background-color: #c0972c;
+  
+}
+.contact:hover {
+  color: white;
+}
