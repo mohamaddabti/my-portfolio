@@ -43,8 +43,8 @@ const Navbar = ({ toggle }) => {
         <Link to='/project' className='project text-gray-900 p-4 hover:text-gray-50' >
           PROJECT
         </Link>
-        <Link to='/about' className='about text-gray-900 p-4  hover:text-gray-50' >
-          ABOUT ME!
+        <Link to='/Contact' className='about text-gray-900 p-4  hover:text-gray-50' >
+          Contact
         </Link>
         
         <SocialIcon 
