@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import sanityClient  from "../client.js";
-import Typical from "react-typical";
+//import Typical from "react-typical";
 import '../index.css';
 import me from "../media/me.png" 
+import { Typewriter } from 'react-simple-typewriter'
+
 
 
 export default function Home(){
@@ -45,16 +47,14 @@ export default function Home(){
                                 <h1 className="">Hello,<br />I am Mohammad Dabti</h1>
                                 <span className="spancolor">
                                     {" "}
-                                    <Typical
-                                    loop={Infinity}
-                                    wrapper='f'
-                                    steps={['Cyber security student 💻',
-                                    2000,
-                                    'Astrophotography 📸',
-                                    2000, 
-                                    'Karate player 🥋🤜',
-                                    2000]}
-                                    
+                                    <Typewriter
+                                    loop
+                                    cursor
+                                    cursorSyle="!"
+                                    typeSpeed={65}
+                                    deleteSpeed={50}
+                                    delaySpeed={2000}
+                                    words={['Cyber security student 💻','Astrophotography 📸','Karate player 🥋🤜']}
                                     className="inline-block"
                                     />                           
                                 </span>

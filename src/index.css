@@ -143,13 +143,13 @@ body {
 
 .spancolor{
   background-color: #c0972c !important;
+  margin-top: 2px;
 }
 
 .home-desc span {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
   /* font-size: var(--h2-font-size); */
-  background-color: var(--first-color);
   color: #051e34;
   padding: 5px 10px;
 }
@@ -164,9 +164,6 @@ body {
   margin-right: 20px;
 }
 
-.home-desc .home-social a {
-  transition: var(--transition);
-}
 
 .home-desc .home-social a:hover {
   opacity: 0.8;
@@ -174,8 +171,6 @@ body {
 
 .home-desc .home-social a.cv {
   font-weight: bold;
-  color: var(--light-color);
-  background-color: var(--second-color);
   width: 41px;
   height: 41px;
   display: flex;
