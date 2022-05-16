@@ -23,8 +23,8 @@ const Dropdown = ({ isOpen, toggle }) => {
       <Link to='/project' className='p-4 text-gray-50 hover:text-red-100'>
         PROJECT
       </Link>
-      <Link to='/about' className='p-4 text-gray-50 hover:text-red-100'>
-        ABOUT ME!
+      <Link to='/Contact' className='p-4 text-gray-50 hover:text-red-100'>
+        Contact
       </Link>
       <div className="flex-center">
       <SocialIcon 

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,700&display=swap');
+
+section {
+  padding: 5rem 10px;
+  background-color: #c0972c;
+}
+.form-box {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: border;
+  box-shadow: 1px 1px 3px dimgrey, 3px 3px 7px #c0972c;
+}
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.form-item {
+  margin-bottom: 0.7rem;
+}
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  
+}
+label {
+  margin-bottom: 3px;
+}
+input,
+textarea {
+  padding: 3px;
+  border: border;
+  background-color: #c0972c;
+}
+input[type="submit"] {
+  background-color: white;
+  padding: 7px;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+input[type="submit"]:hover {
+  animation-name: submit-hover;
+  animation-duration: 0.7s;
+}
+input[type="submit"]:active {
+  animation-name: submit-active;
+  animation-duration: 0.3s;
+}
+@keyframes submit-hover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes submit-active {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.98);
+  }
+}

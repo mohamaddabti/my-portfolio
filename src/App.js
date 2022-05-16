@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route, BrowserRouter, Switch} from "react-router-dom";
 import Home from "./components/Home";
-import About from "./components/About";
+import Contact from "./components/Contact";
 import Post from "./components/Post";
 import Project from "./components/Project";
 import SinglePost from "./components/SinglePost";
@@ -44,7 +44,7 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle} />
         <Switch>
           <Route component={Home} path = '/' exact />
-          <Route component={About} path = '/about'/>
+          <Route component={Contact} path = '/Contact'/>
           <Route component={SinglePost} path = '/post/:slug'/>
           <Route component={Post} path = '/post'/>
           <Route component={Project} path = '/project'/>
