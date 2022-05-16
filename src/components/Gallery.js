@@ -89,7 +89,7 @@ function Gallery(){
                                 {photoData && photoData.map((photo, index) => (
                                     <span className="block h-64 relative rounded shadow leading-snug " key={index}>
                                         <div className="snip1577">
-                                            <img loading="lazy"
+                                            <img loading="lazy" //less photo loading res
                                             src={photo.mainImage.asset.url}
                                             alt={photo.description}
                                             className="w-full h-full rounded-r object-cover absolute"
