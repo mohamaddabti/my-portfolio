@@ -6,6 +6,8 @@ import BtnSlider from './BtnSlider'
 import dataSlider from './dataSlider'
 import SimpleReactLightbox from 'simple-react-lightbox'
 import { SRLWrapper } from "simple-react-lightbox";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 
 
@@ -60,7 +62,7 @@ function Gallery(){
                             key={photo}
                             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                             >
-                                <img src={photo.mainImage.asset.url}
+                                <img loading="lazy" src={photo.mainImage.asset.url}
                                     alt={photo.mainImage}
                                 />
                             </div>
@@ -78,6 +80,7 @@ function Gallery(){
                          ))}
                     </div>
                 </div>
+                
                 <SimpleReactLightbox>
                     <SRLWrapper>
                     <div className="min-h-screen p-12 text-white">
@@ -86,7 +89,7 @@ function Gallery(){
                                 {photoData && photoData.map((photo, index) => (
                                     <span className="block h-64 relative rounded shadow leading-snug " key={index}>
                                         <div className="snip1577">
-                                            <img
+                                            <img loading="lazy"
                                             src={photo.mainImage.asset.url}
                                             alt={photo.description}
                                             className="w-full h-full rounded-r object-cover absolute"
