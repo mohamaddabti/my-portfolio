@@ -4,8 +4,7 @@ import sanityClient  from "../client.js";
 import '../index.css';
 import me from "../media/me.png" 
 import { Typewriter } from 'react-simple-typewriter'
-import BtnSlider from './BtnSlider'
-import dataSlider from './dataSlider'
+import ReactReadMoreReadLess from "react-read-more-read-less";
 
 
 
@@ -156,7 +155,16 @@ export default function Home(){
                                                             {project.projectType}
                                                         </span>
                                                         <p className="my-2 text-lg text-gray-900 leading-relaxed">
-                                                            {project.description}
+                                                            
+                                                            <ReactReadMoreReadLess
+                                                                charLimit={90}
+                                                                readMoreText={"Read more ▼"}
+                                                                readLessText={"Read less ▲"}
+                                                                readMoreClassName="read-more-less--more"
+                                                                readLessClassName="read-more-less--less"
+                                                            >
+                                                                {project.description}
+                                                            </ReactReadMoreReadLess>
                                                         </p>
                                                         
                                                     </div>
