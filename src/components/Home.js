@@ -4,11 +4,32 @@ import sanityClient  from "../client.js";
 import '../index.css';
 import me from "../media/me.png" 
 import { Typewriter } from 'react-simple-typewriter'
+import BtnSlider from './BtnSlider'
+import dataSlider from './dataSlider'
 
 
 
 export default function Home(){
+
     const [skillsData, setskills] = useState(null);
+
+    const [projectData, setProjectData] = useState(null);
+
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "project"]{
+            title,
+            date,
+            place,
+            description,
+            projectType,
+            link,
+            tags
+        }`)
+        .then((data) => setProjectData(data))
+        .catch(console.error);
+    }, []);
+    
 
     useEffect(() =>{
         sanityClient.fetch(`*[_type == "skills"]{
@@ -27,6 +48,7 @@ export default function Home(){
 
     
     return (
+        <>
         <main className="home ">
             <script src="https://unpkg.com/scrollreveal"></script>
             
@@ -103,6 +125,49 @@ export default function Home(){
                         </div> 
                         <br></br><br></br><br></br><br></br><br></br>
                         
+
+                        <span className="projectn-title text-dark">&lt; My Projects /{">"}</span><br></br><br></br>
+                            <div className="container"> 
+                                <section className=" container mx-auto text-white">
+                                        <section className=" grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                            {projectData && projectData.map((project, index) => (
+                                                <article className="projectcolor relative rounded-lg shadow-xl text-white p-8">
+                                                    <h3 className="text-gray-800 text-3xl font-bold mb-0 hover:text-gray-700">
+                                                        <a className="text-gray-800 text-3x1 font-bold mb-2 hover:text-gray-100"
+                                                            href={project.link}
+                                                            alt={project.title}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                        >
+                                                            {project.title}
+                                                        </a>
+                                                    </h3>
+                                                    <div className="text-gray-900 text-xs space-x-4"><br/>
+                                                        <span>
+                                                            <strong className="font-bold">Finished on</strong>:{" "}
+                                                            {new Date(project.date).toLocaleDateString()} 
+                                                        </span><br/>
+                                                        <span>
+                                                            <strong className="font-bold">Company</strong>:{" "}
+                                                            {project.place}
+                                                        </span><br/>
+                                                        <span>
+                                                            <strong className="font-bold">Type</strong>:{" "}
+                                                            {project.projectType}
+                                                        </span>
+                                                        <p className="my-2 text-lg text-gray-900 leading-relaxed">
+                                                            {project.description}
+                                                        </p>
+                                                        
+                                                    </div>
+                                                </article>
+                                            ))}
+                                        </section>
+                                </section>
+                                
+                            </div>
+                            <br/><br/><br/>
+
                         <span className="section-title text-dark">&lt; Skills /{">"}</span><br/><br/><br/>
                         <div className="d-flex flex-wrap"> 
                             {skillsData && skillsData.map((skill, index) => (
@@ -143,10 +208,6 @@ export default function Home(){
                                     </a>
                         </div>
                         <span className="phone__number">
-                        <i className="bx bxs-phone bx-tada-hover"></i>
-                        +47 40981256
-                        </span>
-                        <span className="phone__number">
                             <i className="bx bxs-phone bx-tada-hover"></i>
                         +1 609-803-9031
                         </span>
@@ -156,5 +217,6 @@ export default function Home(){
                 </footer>
 
         </main>
+        </>
     )
 } 

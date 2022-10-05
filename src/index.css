@@ -113,11 +113,6 @@ body {
 #navColor{
   background-color: #c0972c;
 }
-@media (max-width: 360px) {
-  #navlogo {
-    margin-right: 40px;
-  }
-}
 
 /* ==== HOME ==== 
 .home{
@@ -245,7 +240,13 @@ body {
 }
 .section-title{
   background-color: #c0972c !important;
-  font-size: var(--big-font-size);
+  font-size: 40px;
+  margin: 0;
+  color: black;
+}
+.projectn-title{
+  background-color: #c0972c !important;
+  font-size: 40px;
   margin: 0;
   color: black;
 }

@@ -14,14 +14,14 @@ const Dropdown = ({ isOpen, toggle }) => {
       }
       onClick={toggle}
     >
+      <Link to='/project' className='p-4 text-gray-50 hover:text-red-100'>
+        Project
+      </Link>
       <Link to='/post' className='p-4 text-gray-50 hover:text-red-100'>
         BLOG
       </Link>
       <Link to='/gallery' className='p-4 text-gray-50 hover:text-red-100'>
         Gallery
-      </Link>
-      <Link to='/project' className='p-4 text-gray-50 hover:text-red-100'>
-        PROJECT
       </Link>
       <Link to='/Contact' className='p-4 text-gray-50 hover:text-red-100'>
         Contact
