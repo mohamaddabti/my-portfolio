@@ -12,7 +12,7 @@ import SinglePhoto from './components/singelPhoto';
 import ScrollTopArrow from './components/ScrollTopArrow';
 
 const App: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -37,7 +37,7 @@ const App: React.FC = () => {
     <BrowserRouter>
       <ScrollTopArrow />
       <NavBar toggle={toggle} />
-      <Dropdown {...{isOpen, toggle}} />
+      <Dropdown isOpen={isOpen} toggle={toggle} />
       <Switch>
         <Route component={Home} path="/" exact />
         <Route component={Contact} path="/Contact" />
