@@ -382,3 +382,17 @@ footer p {
 .contact:hover {
   color: white;
 }
+
+ /* ==== Read more | Read less ====*/
+ 
+  .text{
+  display: inline;
+  width: 100%;
+  }
+  
+  .read-or-hide{
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-weight: bold
+  }
+  

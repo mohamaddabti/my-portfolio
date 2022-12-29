@@ -28,7 +28,26 @@ interface ProjectData {
   link: string;
   tags: string[];
 }
-
+interface Props {
+    children: React.ReactNode;
+  }
+    const ReadMore: React.FC<Props> = ({ children }) => {
+        const text = children as string;
+        const [isReadMore, setIsReadMore] = useState(true);
+        const toggleReadMore = () => {
+          setIsReadMore(!isReadMore);
+        };
+        return (
+          <p className="text">
+            {isReadMore ? text.slice(0, 150) : text}
+            <span onClick={toggleReadMore} className="read-or-hide">
+              {isReadMore ? "...read more" : " show less"}
+            </span>
+          </p>
+        );
+      };
+      
+  
 export default function Home(): JSX.Element {
   const [skillsData, setskills] = useState<SkillsData | null>(null);
   const [projectData, setProjectData] = useState<ProjectData | null>(null);
@@ -184,7 +203,9 @@ export default function Home(): JSX.Element {
                                                         <p className="my-2 text-lg text-gray-900 leading-relaxed">
                                                             
                                                             <div>
-                                                                {project.description}
+                                                                <ReadMore>
+                                                                    {project.description}
+                                                                </ReadMore>
                                                             </div>
                                                         </p>
                                                         
