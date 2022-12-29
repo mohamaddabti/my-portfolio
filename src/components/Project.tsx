@@ -11,7 +11,24 @@ interface ProjectData {
   link: string;
   tags: string[];
 }
-
+interface Props {
+  children: React.ReactNode;
+}
+  const ReadMore: React.FC<Props> = ({ children }) => {
+      const text = children as string;
+      const [isReadMore, setIsReadMore] = useState(true);
+      const toggleReadMore = () => {
+        setIsReadMore(!isReadMore);
+      };
+      return (
+        <p className="text">
+          {isReadMore ? text.slice(0, 150) : text}
+          <span onClick={toggleReadMore} className="read-or-hide">
+            {isReadMore ? "...read more" : " show less"}
+          </span>
+        </p>
+      );
+    };
 const Project: React.FC = () => {
   const [projectData, setProjectData] = useState<ProjectData[] | null>(null);
 
@@ -68,9 +85,13 @@ const Project: React.FC = () => {
                     <strong className="font-bold">Type</strong>:{" "}
                     {project.projectType}
                   </span>
+                  
                   <p className="my-6 text-lg text-gray-900 leading-relaxed">
-                    {project.description}
+                    <ReadMore>
+                      {project.description}
+                    </ReadMore>
                   </p>
+                  
                   <a
                     href={project.link}
                     target="_blank"
