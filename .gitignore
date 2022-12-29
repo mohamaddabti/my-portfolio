@@ -4,11 +4,12 @@
 node_modules
 /.pnp
 .pnp.js
-build/*
+
 
 # testing
 /coverage
-
+build/
+mohammad/
 # production
 
 
