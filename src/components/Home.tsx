@@ -1,22 +1,42 @@
 import React, { useState, useEffect } from "react";
-import sanityClient  from "../client.js";
+import sanityClient from "../client.js";
 //import Typical from "react-typical";
 import '../index.css';
-import me from "../media/me.png" 
-import { Typewriter } from 'react-simple-typewriter'
+import me from "../media/me.png"
+import { Typewriter } from 'react-simple-typewriter';
 import ReactReadMoreReadLess from "react-read-more-read-less";
 
+interface SkillsData {
+  map(arg0: (skill: any, index: any) => JSX.Element): React.ReactNode;
+  title: string;
+  mainImage: {
+    asset: {
+      _id: string;
+      url: string;
+    };
+    alt: string;
+  };
+}
 
+interface ProjectData {
+  map(arg0: (project: any, index: any) => JSX.Element): React.ReactNode;
+  title: string;
+  date: string;
+  place: string;
+  description: string;
+  projectType: string;
+  link: string;
+  tags: string[];
+}
 
-export default function Home(){
+export default function Home(): JSX.Element {
+  const [skillsData, setskills] = useState<SkillsData | null>(null);
+  const [projectData, setProjectData] = useState<ProjectData | null>(null);
 
-    const [skillsData, setskills] = useState(null);
-
-    const [projectData, setProjectData] = useState(null);
-
-
-    useEffect(() => {
-        sanityClient.fetch(`*[_type == "project"]{
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "project"]{
             title,
             date,
             place,
@@ -24,14 +44,16 @@ export default function Home(){
             projectType,
             link,
             tags
-        }`)
-        .then((data) => setProjectData(data))
-        .catch(console.error);
-    }, []);
-    
+        }`
+      )
+      .then((data) => setProjectData(data))
+      .catch(console.error);
+  }, []);
 
-    useEffect(() =>{
-        sanityClient.fetch(`*[_type == "skills"]{
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "skills"]{
             title,
             mainImage{
                 asset->{
@@ -40,44 +62,49 @@ export default function Home(){
                 },
                 alt
             }
-        }`)
-        .then((data) => setskills(data))
-        .catch(console.error);
-    }, []);
+        }`
+      )
+      .then((data) => setskills(data))
+      .catch(console.error);
+  }, []);
 
-    
-    return (
-        <>
-        <main className="home ">
-            <script src="https://unpkg.com/scrollreveal"></script>
-            
-            <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link
-            href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
-            rel="stylesheet"
-            />
-            <link
-            href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-            rel="stylesheet"
-            />
-                <section className="home section" id="home">
-                    
-                    <div className="container text-white">
-                        <div className="home-content">
-                            <div className="home-desc">
-                                <h1 className="">Hello,<br />I am Mohammad Dabti</h1>
-                                <span className="spancolor">
-                                    {" "}
-                                    <Typewriter
-                                    loop
-                                    cursor
-                                    cursorSyle="!"
-                                    typeSpeed={65}
-                                    deleteSpeed={50}
-                                    delaySpeed={2000}
-                                    words={['Cyber security student 💻','Astrophotography 📸','Karate player 🥋🤜']}
-                                    className="inline-block"
-                                    />                           
+  return (
+    <>
+      <main className="home ">
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+          rel="stylesheet"
+        />
+        <section className="home section" id="home">
+          <div className="container text-white">
+            <div className="home-content">
+              <div className="home-desc">
+                <h1 className="">
+                  Hello,<br />I am Mohammad Dabti
+                  </h1>
+                    <span className="spancolor">
+                    {" "}
+                    <Typewriter
+                    loop
+                    cursor
+                    cursorStyle="!"
+                    typeSpeed={65}
+                    deleteSpeed={50}
+                    delaySpeed={2000}
+                    words={[
+                    "Cyber security student 💻",
+                    "Astrophotography 📸",
+                    "Karate player 🥋🤜",
+                    ]}
+                    className="inline-block"
+                    />
                                 </span>
                                 <p className="">
                                 I am a cyber security student , and I keep learning to deal with 
