@@ -37,7 +37,7 @@ const App: React.FC = () => {
     <BrowserRouter>
       <ScrollTopArrow />
       <NavBar toggle={toggle} />
-      <Dropdown isOpen={isOpen} toggle={toggle} />
+      <Dropdown isOpen={isOpen} toggle={toggle} history={undefined} location={undefined} match={undefined} />
       <Switch>
         <Route component={Home} path="/" exact />
         <Route component={Contact} path="/Contact" />
