@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
-import BlockContent from "@sanity/block-content-to-react";
+//import BlockContent from "@sanity/block-content-to-react";
 import "../index.css";
 
 const builder = imageUrlBuilder(sanityClient);
@@ -41,7 +41,7 @@ const About: React.FC = () => {
       <div className="p-10 lg:pt-48 container mx-auto relative">
         <section className="bf-blue-900 rounded-lg shadow-2xl lg:flex p-20">
           <img
-            src={urlFor(author.authorImage).url()}
+            //src={urlFor(author.authorImage).url()}
             className="rounded w-32 h-32 lg:w-64 lg:h-64 mr-8"
             alt={author.name}
           />
@@ -51,11 +51,7 @@ const About: React.FC = () => {
               <span className="name">{author.name}</span>
             </h1>
             <div className="prose lg:prose-xl text-white">
-              <BlockContent
-                //blocks={author.bio}
-                //projectId= "ncdfzity"
-                //dataset= "production"
-              />
+              
               <h5>
                 A Cyber security student at{" "}
                 <a

@@ -4,7 +4,7 @@ import sanityClient from "../client.js";
 import '../index.css';
 import me from "../media/me.png"
 import { Typewriter } from 'react-simple-typewriter';
-import ReactReadMoreReadLess from "react-read-more-read-less";
+//import ReactReadMoreReadLess from "react-read-more-read-less";
 
 interface SkillsData {
   map(arg0: (skill: any, index: any) => JSX.Element): React.ReactNode;
@@ -103,7 +103,7 @@ export default function Home(): JSX.Element {
                     "Astrophotography 📸",
                     "Karate player 🥋🤜",
                     ]}
-                    className="inline-block"
+                    //className="inline-block"
                     />
                                 </span>
                                 <p className="">
@@ -161,7 +161,7 @@ export default function Home(): JSX.Element {
                                                     <h3 className="text-gray-800 text-3xl font-bold mb-0 hover:text-gray-700">
                                                         <a className="text-gray-800 text-3x1 font-bold mb-2 hover:text-gray-100"
                                                             href={project.link}
-                                                            alt={project.title}
+                                                            //alt={project.title}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                         >
@@ -183,15 +183,9 @@ export default function Home(): JSX.Element {
                                                         </span>
                                                         <p className="my-2 text-lg text-gray-900 leading-relaxed">
                                                             
-                                                            <ReactReadMoreReadLess
-                                                                charLimit={90}
-                                                                readMoreText={"Read more ▼"}
-                                                                readLessText={"Read less ▲"}
-                                                                readMoreClassName="read-more-less--more"
-                                                                readLessClassName="read-more-less--less"
-                                                            >
+                                                            <div>
                                                                 {project.description}
-                                                            </ReactReadMoreReadLess>
+                                                            </div>
                                                         </p>
                                                         
                                                     </div>

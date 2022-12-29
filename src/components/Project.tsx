@@ -45,7 +45,7 @@ const Project: React.FC = () => {
                   <a
                     className="text-gray-800 text-3xl font-bold mb-2 hover:text-gray-100"
                     href={project.link}
-                    alt={project.title}
+                    //alt={project.title}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

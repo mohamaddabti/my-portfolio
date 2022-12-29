@@ -69,7 +69,7 @@ function Gallery() {
           photoData.map((photo, index) => {
             return (
               <div
-                key={photo}
+                //key={photo}
                 className={
                   slideIndex === index + 1
                     ? "slide active-anim"
@@ -79,7 +79,7 @@ function Gallery() {
                 <img
                   loading="lazy"
                   src={photo.mainImage.asset.url}
-                  alt={photo.mainImage}
+                  //alt={photo.mainImage}
                 />
               </div>
             );
