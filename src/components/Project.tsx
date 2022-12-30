@@ -69,42 +69,27 @@ const Project: React.FC = () => {
                     {project.title}
                   </a>
                 </h3>
-                <div className="text-gray-900 text-xs space-x-4">
-                  <br />
+                <div className="text-gray-900 text-xs space-x-4"><br/>
                   <span>
                     <strong className="font-bold">Finished on</strong>:{" "}
-                    {new Date(project.date).toLocaleDateString()}
-                  </span>
-                  <br />
-                  <span>
-                    <strong className="font-bold">Company</strong>:{" "}
-                    {project.place}
-                  </span>
-                  <br />
-                  <span>
-                    <strong className="font-bold">Type</strong>:{" "}
-                    {project.projectType}
-                  </span>
-                  
-                  <p className="my-6 text-lg text-gray-900 leading-relaxed">
-                    <ReadMore>
-                      {project.description}
-                    </ReadMore>
-                  </p>
-                  
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-red-700 font-bold hover:underline hover:text-red-
-                    800 text-xl"
-                    >
-                      View The Project{" "}
-                      <span role="img" aria-label="right pointer">
-                        {" "}
-                      </span>
-                    </a>
-                  </div>
+                      {new Date(project.date).toLocaleDateString()} 
+                    </span><br/>
+                     <span>
+                        <strong className="font-bold">Company</strong>:{" "}
+                          {project.place}
+                      </span><br/>
+                      <span>
+                        <strong className="font-bold">Type</strong>:{" "}
+                          {project.projectType}
+                       </span>
+                          <p className="my-2 text-lg text-gray-900 leading-relaxed">                                
+                          <div>
+                            <ReadMore>
+                              {project.description}
+                            </ReadMore>
+                          </div>
+                       </p>                                
+                   </div>
                 </article>
               ))}
           </section>
