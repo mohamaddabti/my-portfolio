@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-/build
-/mohammad
+# ignore all files in any directory named build
+build/
+mohammad/
 # dependencies
 node_modules
 /.pnp
